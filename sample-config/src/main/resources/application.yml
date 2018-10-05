@@ -1,10 +1,13 @@
 ---
 spring:
   cloud:
+    bus: true
     config:
       server:
-        native:
-          searchLocations: classpath:/config
+        git:
+          uri: https://github.com/jayallenmn/blog-spring-cloud-config-configuration.git
+        #native:
+        #  searchLocations: classpath:/config
 
 server:
   port: 8888

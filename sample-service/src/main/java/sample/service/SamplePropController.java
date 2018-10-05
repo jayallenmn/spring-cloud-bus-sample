@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class SamplePropController {
 
-    @Value("${service.prop:notset}")
+    //@Value("${service.prop:notset}")
+    @Value("${sample.firstProperty:notset}")
     private String aRefreshableProperty;
 
     @RequestMapping("/show")

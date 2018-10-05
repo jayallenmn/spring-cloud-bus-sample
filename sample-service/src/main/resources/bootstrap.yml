@@ -6,3 +6,6 @@ spring:
     config:
       enabled: true
       uri: ${configserver.url:http://localhost:8888}
+  rabbitmq:
+    uri: amqps://admin:xxxxxxxxx@portal-ssl160-38.bmix-dal-yp-xxxxxxxxxxxxxx.composedb.com:58693/bmix-dal-yp-95bac6a3-dd36-44fd-bb1d-db8c0eca67f6
+    

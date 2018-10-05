@@ -2,5 +2,5 @@
 spring:
   application:
     name: sample-config
-  profiles:
-    active: native
+  #profiles:
+    #active: native
