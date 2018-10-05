@@ -1,7 +1,7 @@
 Spring Cloud Bus Demo
 ---------------------
 
-This is a simple demonstration of Spring Cloud Bus feature of being able to refresh properties in all instances of an application using rabbit as the message broker.  A sample rabbit uri is in the bootstrap.yml file in of the simple-service.
+This is a simple demonstration of the Spring Cloud Bus feature of being able to refresh properties in all instances of an application using rabbit as the message broker.  A sample rabbit uri is in the bootstrap.yml file in of the simple-service.
 
 .Start up Config Server
 [source,java]
