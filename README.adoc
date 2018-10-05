@@ -30,7 +30,7 @@ To change a property, modify the configuration(s) pointed to in the git repo def
 
 The change will not reflect in the the applications until you publish the webhook event for the config server.
 
-If you do not have public ip address or public domain name set up yet, you can publish (simulate) the webhook event for the Config Server by calling the /monitor endpoint with given request body. Then the Config Server will consider it as a webhook event published by the related repository service provider and continue with rest of the operations.
+If you do not have a public ip address or public domain name set up yet, you can publish (simulate) the webhook event for the config server by calling the /monitor endpoint with given request body. Then the config server will consider it as a webhook event published by the related repository service provider and continue with rest of the operations.
 
 [source]
 ----
