@@ -32,13 +32,19 @@ mvn spring-boot:run -Dserver.port=8081
 
 If all the applications have come up cleanly, the endpoint should be available at http://localhost:8080/show, http://localhost:8081/show
 
+To change a property, modify the configuration(s) pointed to in the git repo defined in sample-config application.yml.
 
-. To change the property, open sample-config/src/main/resources/config/sample-service.yml and modify `service.prop` value and restart config server
-. The change will not reflect in the the applications
-. Now refresh the properties using a POST request:
-[source,java]
+The change will not reflect in the the applications until you call the monitor endpoint on the config server.
+
+If you do not have public ip address or public domain name set up yet, you can publish (simulate) the webhook event for the Config Server by calling the /monitor endpoint with given request body. Then the Config Server will consider it as a webhook event published by the related repository service provider and continue with rest of the operations.
+
+[source,perl]
 ----
-curl -X POST http://localhost:8080/bus/refresh
+curl -v -X POST "http://localhost:8080/monitor" \
+-H "Content-Type: application/json" \
+-H "X-Event-Key: repo:push" \
+-H "X-Hook-UUID: webhook-uuid" \
+-d '{"push": {"changes": []} }'
 ----
 . The changed property should now reflect on all instances of the application.
 
