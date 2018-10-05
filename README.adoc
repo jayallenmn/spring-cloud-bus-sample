@@ -40,7 +40,7 @@ curl -v -X POST "http://localhost:8080/monitor" \
 -H "X-Hook-UUID: webhook-uuid" \
 -d '{"push": {"changes": []} }'
 ----
-. The changed property should now reflect on all instances of the application.
+The changed property should now reflect on all instances of the application.
 
 
 
