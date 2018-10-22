@@ -1,7 +1,7 @@
 Spring Cloud Bus Demo
 ---------------------
 
-This is a simple demonstration of the Spring Cloud Bus feature of being able to refresh properties in all instances of an application using rabbit as the message broker.  A sample rabbit uri is in the bootstrap.yml file in of the simple-service.
+This is a simple demonstration of the Spring Cloud Bus feature of being able to refresh properties in all instances of an application using rabbit as the message broker.  A sample rabbit uri is in the bootstrap.yml file of the simple-service.
 
 .Start up Config Server
 [source,java]
@@ -30,7 +30,7 @@ To change a property, modify the configuration(s) pointed to in the git repo def
 
 The change will not reflect in the the applications until you publish the webhook event for the config server.
 
-If you do not have a public ip address or public domain name set up yet, you can publish (simulate) the webhook event for the config server by calling the /monitor endpoint with given request body. Then the config server will consider it as a webhook event published by the related repository service provider and continue with rest of the operations.
+If you do not have a public ip address or public domain name set up yet, you can publish (simulate) the webhook event for the config server by calling the /monitor endpoint with the given request body. The config server will consider it as a webhook event published by the related repository service provider and continue with the rest of the operations.
 
 [source]
 ----
